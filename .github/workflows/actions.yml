@@ -21,12 +21,12 @@ jobs:
           python-version: '3.9' # install the python version needed
         
           # INSTALL PYTHON
-        - name: commit files
+      - name: commit files
         run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)   
 
         # EXE PYTHON
       - name: execute py script # run main.py
